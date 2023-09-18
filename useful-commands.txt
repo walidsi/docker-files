@@ -1,0 +1,9 @@
+docker run --name mysql-cont -p 3306:3306 -e MYSQL_ROOT_PASSWORD=password -d mysql:8.0.34
+
+docker run -it --name python311-cont python:3.11
+
+docker run -it --name beeware-dev-env-cont walidsi/beeware-dev-env:0.0.1
+
+docker build --build-arg USER_NAME=walid --build-arg USER_UID=1000 --build-arg GROUP_UID=1000 -t ubuntu-python-beeware .
+
+docker run --name python311-cont python:3.11
